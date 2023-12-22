@@ -1,0 +1,39 @@
+.bgLeft {
+  background: url("../../Assets/Career/Top\ BG\ left\ .png");
+  object-fit: cover;
+  background-position: top left;
+  background-size: 500px;
+  background-repeat: no-repeat;
+}
+.bgRight {
+  background: url("../../Assets/Career/Top\ BG\ Right.png");
+  object-fit: cover;
+  background-position: right;
+  background-size: 500px;
+  background-repeat: no-repeat;
+}
+
+.position-card {
+  background: rgba(0, 243, 161, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cv-right-section {
+  background: url("../../Assets/Career/Water-Bottel.jpg");
+  object-fit: cover;
+  background-position: bottom center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bg-career {
+  background: url("../../Assets/Career/Bg.png");
+  object-fit: cover;
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

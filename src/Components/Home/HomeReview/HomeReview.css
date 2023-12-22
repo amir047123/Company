@@ -1,0 +1,17 @@
+.border-gradient {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #12fffe, #00f3a1) 1;
+  border-radius: 20px;
+}
+
+.slide {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 83%,
+    50% 83%,
+    50% 93%,
+    45% 83%,
+    0 83%
+  );
+}

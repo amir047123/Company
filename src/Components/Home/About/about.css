@@ -1,0 +1,24 @@
+.about_left_background {
+  background-image: url("../../../../public/img/About/Left-bg-img.png");
+  border-end-end-radius: 25px;
+  border-top-right-radius: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 1600px) {
+  .about_left_background {
+    height: 42vh;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #00f3a1 !important;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #00f3a1 !important;
+  width: 12px;
+  height: 12px;
+}

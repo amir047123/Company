@@ -1,0 +1,21 @@
+.button {
+  background: transparent;
+  padding: 0.5rem 1rem;
+  background-image: linear-gradient(90deg, #040c18, #040c18),
+    linear-gradient(90deg, #00f3a1, #12fffe);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+  border-radius: 0.75rem;
+}
+
+/* === gradient text color === */
+/* .button__label {
+  background-image: linear-gradient(90deg, #00f3a1, #12fffe);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+} */

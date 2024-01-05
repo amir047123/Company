@@ -30,6 +30,7 @@ module.exports = {
       white: "#FFFFFF",
       // our web green light color
       lightGreen: "#93CCC8",
+      black:'#000000'
     },
     extend: {},
   },

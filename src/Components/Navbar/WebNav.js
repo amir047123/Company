@@ -49,7 +49,7 @@ const WebNav = () => {
                     ? "bg-primary transparent px-3 py-2 text-primary"
                     : "px-3 py-2 hover:text-primary"
                 }
-                to="/services"
+                to="services"
               >
                 Services
               </NavLink>
@@ -73,7 +73,7 @@ const WebNav = () => {
                     ? "bg-primary transparent px-3 py-2 text-primary"
                     : "px-3 py-2 hover:text-primary"
                 }
-                to={"/aboutUs"}
+                to={"aboutUs"}
               >
                 About us
               </NavLink>
@@ -86,7 +86,7 @@ const WebNav = () => {
                     ? "bg-primary transparent px-3 py-2 text-primary"
                     : "px-3 py-2 hover:text-primary"
                 }
-                to={"/blogs"}
+                to={"blogs"}
               >
                 Blog
               </NavLink>
@@ -99,13 +99,13 @@ const WebNav = () => {
                     ? "bg-primary transparent px-3 py-2 text-primary"
                     : "px-3 py-2 hover:text-primary"
                 }
-                to={"/careers"}
+                to={"careers"}
               >
                 Career
               </NavLink>
             </li>
           </div>
-          <Link to="/hire">
+          <Link to="hire">
             <li>
               <button className="font-semibold bg-gradient-to-tr from-primary/80 to-secondary/80 px-4 py-2 rounded-md drop-shadow-xl text-[16px]">
                 Hire us!

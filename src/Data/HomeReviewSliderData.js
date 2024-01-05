@@ -1,6 +1,6 @@
 const data = [
   {
-    img: "./img/Other/mir.jpg",
+    img: "./img/Other/founder.png",
     details:
       "As a satisfied client of Thinky Storm IT company, I would like to share my positive experience working with them. I was in need of a new website for my business, and Thinky Storm was recommended to me by a friend. I was impressed by their professionalism, expertise, and commitment to delivering high-quality work.",
   },

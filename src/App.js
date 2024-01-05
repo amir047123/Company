@@ -1,23 +1,21 @@
-import { Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import TopBarProgress from "react-topbar-progress-indicator";
-import Navbar from "./Components/Navbar/Navbar";
-import CustomRoutes from "./Routes/CustomRoutes";
-import { routes } from "./Routes/routes";
-// import Cursor from "./Shared/Cursor/Cursor";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/scrollbar";
-import Footer from "./Components/Footer/Footer";
-import { DynamicRoutes } from "./Routes/DynamicRoutes";
 import { useEffect, useState } from "react";
 import Loading from "./Shared/Loading/Loading";
+import AdminDashboard from "./Pages/AdminDashbord/AdminDashboard";
+import AdminIndex from "./Components/AdminDashbord/AdminIndex";
+import AdminRoutes from "./Routes/AdminRoutes";
+import Notfound from "./Shared/Notfound";
+import Home from "./Pages/Home/Home";
+import PublicRoutes from "./Routes/PublicRoutes";
+import Main from "./Pages/Main/Main";
 
 function App() {
-  //Top Progress bar edit
+  // Top Progress bar edit
   TopBarProgress.config({
     barColors: {
       0: "#12FFFE",
@@ -42,25 +40,25 @@ function App() {
       {loading ? (
         <Loading />
       ) : (
-        <div>
-          <div className="pb-24">
-            <Navbar />
-          </div>
-          <div>
-            <CustomRoutes>
-              {routes.map(({ path, Component }, index) => (
-                <Route key={index + 1} path={path} element={<Component />} />
-              ))}
-            </CustomRoutes>
-            {/* Dynamic routes */}
-            <CustomRoutes>
-              {DynamicRoutes.map(({ path, Component }, index) => (
-                <Route key={index + 1} path={path} element={<Component />} />
-              ))}
-            </CustomRoutes>
-          </div>
-          <Footer />
-        </div>
+        <Routes>
+          {/* Public routes */}
+          <Route path="/" element={<Main />}>
+            <Route index element={<Home />} />
+            {PublicRoutes.map(({ path, Component }, index) => (
+              <Route key={index} path={path} element={<Component />} />
+            ))}
+          </Route>
+
+          {/* Admin routes */}
+          <Route path="/adminDashboard" element={<AdminDashboard />}>
+            <Route index element={<AdminIndex />} />
+            {AdminRoutes.map(({ path, Component }, index) => (
+              <Route key={index} path={path} element={<Component />} />
+            ))}
+          </Route>
+
+          <Route path="*" element={<Notfound />} />
+        </Routes>
       )}
     </div>
   );

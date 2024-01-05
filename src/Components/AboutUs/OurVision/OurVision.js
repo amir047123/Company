@@ -35,7 +35,7 @@ const OurVision = () => {
         </div>
         {/* our image card */}
 
-        <div className=" grid lg:grid-cols-3 md:grid-cols-2 gap-5">
+        {/* <div className=" grid lg:grid-cols-3 md:grid-cols-2 gap-5">
           <div className="w-full block group rounded-lg lg:h-60 overflow-hidden relative ">
             <img src={img} alt="" className="w-full h-full absolute inset-0" />
             <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-20 transition duration-300 ease-in-out bg-primary"></div>
@@ -106,7 +106,7 @@ const OurVision = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

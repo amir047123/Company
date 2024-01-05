@@ -4,7 +4,7 @@ import WebNav from "./WebNav";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="pb-24" >
       <div className="lg:block hidden">
         <WebNav />
       </div>

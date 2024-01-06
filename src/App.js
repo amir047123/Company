@@ -13,6 +13,7 @@ import Notfound from "./Shared/Notfound";
 import Home from "./Pages/Home/Home";
 import PublicRoutes from "./Routes/PublicRoutes";
 import Main from "./Pages/Main/Main";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   // Top Progress bar edit
@@ -59,7 +60,10 @@ function App() {
 
           <Route path="*" element={<Notfound />} />
         </Routes>
+        
       )}
+            <ToastContainer />
+
     </div>
   );
 }

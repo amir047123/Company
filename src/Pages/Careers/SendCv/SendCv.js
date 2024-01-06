@@ -1,11 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ContactInfo from "../../../Shared/ContactInfo";
 import SendCvForm from "./SendCvForm";
+import { toast } from "react-toastify";
+import moment from "moment/moment";
+import { useParams } from "react-router-dom";
 
 const SendCv = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+const {id }= useParams()
+console.log(id)
+ 
   return (
     <div className="background relative">
       <img
@@ -18,7 +24,7 @@ const SendCv = () => {
           <ContactInfo />
         </div>
         <div className="col-span-7 lg:py-16 lg:px-24 p-10">
-          <SendCvForm></SendCvForm>
+          <SendCvForm  id={id} ></SendCvForm>
         </div>
       </div>
     </div>

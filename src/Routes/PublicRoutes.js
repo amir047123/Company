@@ -19,8 +19,8 @@ const PublicRoutes = [
   { path: "blogs", Component: Blogs },
   { path: "careers", Component: Careers },
   { path: "hire", Component: HireUs },
-  { path: "send-cv", Component: SendCv },
-  { path: "jobDetails", Component: JobDetails },
+  { path: "send-cv/:id", Component: SendCv },
+  { path: "jobDetails/:id", Component: JobDetails },
   { path: "fullTeam", Component: SeeFullTeam },
 
 

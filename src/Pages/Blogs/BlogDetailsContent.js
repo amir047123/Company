@@ -2,10 +2,42 @@ import { Icon } from "@iconify/react";
 import { Polyline } from "@mui/icons-material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import logo from "../../Assets/Team/thinkystorm-amirfaysal-ceo.png";
 
 const BlogDetailsContent = ({ blog }) => {
   const navigate = useNavigate();
-  const { category, authorName, title, description, authorImg } = blog;
+  const { category, authorName, title, description, createdAt } = blog;
+
+  // Function to encode URI component
+  const encodeURIcomponent = (data) => {
+    return encodeURIComponent(data);
+  };
+
+  // Function to create dynamic share links
+  const getShareLink = (socialMedia) => {
+    const baseLink = window.location.href; // Current page URL
+
+    switch (socialMedia) {
+      case "facebook":
+        return `https://www.facebook.com/sharer/sharer.php?u=${encodeURIcomponent(
+          baseLink
+        )}`;
+      case "instagram":
+        // Instagram doesn't support direct sharing via URL, so you may need to use a third-party library or redirect users to your Instagram profile.
+        return "https://www.instagram.com/thinkystorm/";
+      case "linkedin":
+        return `https://www.linkedin.com/shareArticle?url=${encodeURIcomponent(
+          baseLink
+        )}`;
+      case "twitter":
+        return `https://twitter.com/intent/tweet?url=${encodeURIcomponent(
+          baseLink
+        )}&text=${encodeURIcomponent(title)}`;
+      default:
+        return baseLink;
+    }
+  };
+
   return (
     // blog details div
     <>
@@ -23,11 +55,7 @@ const BlogDetailsContent = ({ blog }) => {
           </button>
 
           <button className="text-primary hover:text-white">
-            <a
-              href="https://www.facebook.com/thinkystorm"
-              target={"_blank"}
-              rel="noreferrer"
-            >
+            <a href={getShareLink("facebook")} target="_blank" rel="noreferrer">
               <Icon
                 className="text-2xl"
                 icon="typcn:social-facebook-circular"
@@ -35,11 +63,10 @@ const BlogDetailsContent = ({ blog }) => {
             </a>
           </button>
           <div className="flex items-center">
-            {" "}
             <button className="text-primary hover:text-white">
               <a
-                href="https://www.instagram.com/thinkystorm/"
-                target={"_blank"}
+                href={getShareLink("instagram")}
+                target="_blank"
                 rel="noreferrer"
               >
                 <Icon className="text-lg" icon="lucide:instagram" />
@@ -47,16 +74,12 @@ const BlogDetailsContent = ({ blog }) => {
             </button>
           </div>
           <button className="text-primary hover:text-white">
-            <a
-              href="https://www.linkedin.com/company/thinky-storm/"
-              target={"_blank"}
-              rel="noreferrer"
-            >
+            <a href={getShareLink("linkedin")} target="_blank" rel="noreferrer">
               <Icon className="text-2xl" icon="jam:linkedin-circle" />
             </a>
           </button>
           <button className="text-primary hover:text-white">
-            <a href="/" target={"_blank"} rel="noreferrer">
+            <a href={getShareLink("twitter")} target="_blank" rel="noreferrer">
               <Icon className="text-2xl" icon="jam:twitter-circle" />
             </a>
           </button>
@@ -76,12 +99,19 @@ const BlogDetailsContent = ({ blog }) => {
                   icon="material-symbols:nest-clock-farsight-analog-outline-rounded"
                 />
               </button>
-              <p className="text-xs text-lightGreen">10 Min to read</p>
+              <p className="text-xs text-lightGreen">
+                {" "}
+                {new Date(createdAt).toLocaleDateString(undefined, {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
             </div>
             <div className="flex justify-end gap-2 items-center">
               <img
                 className="w-5 rounded-full bg-primary"
-                src={authorImg}
+                src={logo}
                 alt="author img"
               />
               <p className="text-lightGreen text-xs">{authorName}</p>
@@ -89,76 +119,20 @@ const BlogDetailsContent = ({ blog }) => {
           </div>
           <div className="">
             <h2 className="text-2xl my-10 font-semibold">{title}</h2>
-            <p className="text-sm text-lightGreen">{description}</p>
-            <p className="text-sm text-lightGreen mt-5">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-              voluptas harum alias molestiae, ullam sapiente ipsum inventore
-              rerum mollitia nesciunt. Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Magnam laboriosam ipsa odio possimus,
-            </p>
-            <p className="text-sm text-lightGreen mt-5">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-              voluptas harum alias molestiae, ullam sapiente ipsum inventore
-              rerum mollitia nesciunt.
-            </p>
-            <h2 className="text-lg mt-10 mb-2 font-semibold">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            </h2>
-            <p className="text-sm text-lightGreen">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-              voluptas harum alias molestiae, ullam sapiente ipsum inventore
-              rerum mollitia nesciunt. Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Magnam laboriosam ipsa odio possimus, ea tempore
-              distinctio tenetur blanditiis libero necessitatibus, deserunt
-              cumque accusantium odit repellendus iure error dolorem a id.
-            </p>
-            <p className="text-sm text-lightGreen mt-5">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-              voluptas harum alias molestiae, ullam sapiente ipsum inventore
-              rerum mollitia nesciunt. Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Magnam laboriosam ipsa odio possimus,
-            </p>
-            <p className="text-sm text-lightGreen mt-5">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-              voluptas harum alias molestiae, ullam sapiente ipsum inventore
-              rerum mollitia nesciunt.
-            </p>
-            <h2 className="text-lg mt-10 mb-2 font-semibold">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            </h2>
-            <p className="text-sm text-lightGreen">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-              voluptas harum alias molestiae, ullam sapiente ipsum inventore
-              rerum mollitia nesciunt. Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Magnam laboriosam ipsa odio possimus,
-            </p>
-            <p className="text-sm text-lightGreen mt-5">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-              voluptas harum alias molestiae, ullam sapiente ipsum inventore
-              rerum mollitia nesciunt. Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Magnam laboriosam ipsa odio possimus, Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-              sapiente ipsam atque voluptates asperiores necessitatibus soluta
-              adipisci facere eum similique!
-            </p>
-            <p className="text-sm text-lightGreen mt-5">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-              voluptas harum alias molestiae, ullam sapiente ipsum inventore
-              rerum mollitia nesciunt.
-            </p>
-            <p className="text-sm text-lightGreen mt-5">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-              voluptas harum alias molestiae,
-            </p>
+            <p
+              dangerouslySetInnerHTML={{ __html: description }}
+              className="text-sm text-lightGreen"
+            ></p>
+
             {/* Blog details footer */}
             <div className="h-[2px] w-full bg-primary mt-10"></div>
             <div className="flex justify-start gap-2 items-center mt-5">
               <img
                 className="w-5 rounded-full bg-primary"
-                src={authorImg}
+                src={logo}
                 alt="author img"
               />
-              <p className="text-lightGreen text-xs">Naimur Rahman</p>
+              <p className="text-lightGreen text-xs">{authorName}</p>
             </div>
           </div>
         </div>

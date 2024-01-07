@@ -1,4 +1,5 @@
 import AdminIndex from "../Components/AdminDashbord/AdminIndex";
+import AdminBlog from "../Pages/AdminDashbord/Blogs/AdminBlog";
 import AddJobPost from "../Pages/AdminDashbord/JobPost/AddJobPost";
 import AllApplications from "../Pages/AdminDashbord/JobPost/AllApplications";
 import AllJobTable from "../Pages/AdminDashbord/JobPost/AllJobTable";
@@ -14,6 +15,8 @@ const AdminRoutes = [
 
   { path: "allApplication", Component: AllApplications },
   { path: "viewApplication/:id", Component: ViewApplication },
+
+  { path: "AddBlog", Component: AdminBlog },
 
 
 ];

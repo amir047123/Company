@@ -22,7 +22,7 @@ const Footer = () => {
     },
     {
       content:
-        "Office Address: Dhaka-1216, Pallabi, House-15, Road-2, Block-B, Section-12",
+        "Office Address: Virtual Team | Dhaka, Bangladesh",
       img: <LocationOnIcon />,
     },
   ];

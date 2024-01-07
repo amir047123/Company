@@ -54,7 +54,6 @@ const SendCvForm = ({ id }) => {
           introduceYourself: "",
         });
         setImg("");
-
       } else {
         const errorData = await response.json();
         toast.error(`Error: ${errorData.message || "Something went wrong"}`);
@@ -87,7 +86,7 @@ const SendCvForm = ({ id }) => {
 
       <form onSubmit={handleSubmit}>
         <fieldset>
-          <legend>Contact Information</legend>
+          <legend className=" mb-3 text-xl font-bold">Contact Information</legend>
           <label htmlFor="name">Full Name</label>
           <input
             id="name"
@@ -138,7 +137,8 @@ const SendCvForm = ({ id }) => {
         </fieldset>
 
         <label htmlFor="resume">Your resume</label>
-        <div className="input_border_gradient rounded-lg flex justify-between items-center px-4 py-3 mt-1">
+      <div className=" flex gap-3 items-center">
+      <div className="input_border_gradient rounded-lg w-full flex justify-between items-center px-4 py-3 mt-1">
           <p className="text-sm">Browse File</p>
           <label className="flex items-center justify-center py-[6px] px-6 bg-gradient-to-r from-primary to-secondary border-none cursor-pointer rounded-3xl ">
             <p className="font-medium uppercase text-xs text-dark">Browse</p>
@@ -152,14 +152,20 @@ const SendCvForm = ({ id }) => {
             />
           </label>
         </div>
+        <img
+            className="w-[70px] rounded-md shadow-lg"
+            src={img ? img : formData?.resume}
+            alt="File"
+          ></img>
+      </div>
 
-        <label className="text-xs text-lightGreen">
+        <label className="text-xs text-lightGreen ">
           Acceptable file formats are, doc, docx, pdf, maximum file size is 5MB
         </label>
 
-        <fieldset>
-          <legend>Additional Information</legend>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+        <fieldset className=" mt-5"> 
+          <legend className=" text-xl font-bold">Additional Information</legend>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5 ">
             <div>
               <label htmlFor="importantLink">Important link</label>
               <input
@@ -174,7 +180,9 @@ const SendCvForm = ({ id }) => {
               />
             </div>
             <div>
-              <label htmlFor="financialExpectations">Financial expectations? </label>
+              <label htmlFor="financialExpectations">
+                Financial expectations?{" "}
+              </label>
               <input
                 id="financialExpectations"
                 className="w-full block p-3 outline-none input_border_gradient rounded-xl mt-1 mb-10"
@@ -200,12 +208,12 @@ const SendCvForm = ({ id }) => {
         </fieldset>
 
         <div className="mt-10">
-          <label>
-            <input type="checkbox" required />
-            Consent to data processing can be withdrawn at any time, which will not
-            affect the lawfulness of the processing carried out on the basis of this
-            consent before its withdrawal. For more information, please visit.
-            Terms of use.
+          <label className="">
+            <input type="checkbox" required className="mr-2" />
+            Consent to data processing can be withdrawn at any time, which will
+            not affect the lawfulness of the processing carried out on the basis
+            of this consent before its withdrawal. For more information, please
+            visit. Terms of use.
           </label>
         </div>
 

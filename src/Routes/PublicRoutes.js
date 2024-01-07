@@ -8,18 +8,28 @@ import HireUs from "../Pages/HireUs/HireUs";
 import SendCv from "../Pages/Careers/SendCv/SendCv";
 import JobDetails from "../Pages/Careers/OpportunitySection/JobDetails/JobDetails";
 import SeeFullTeam from "../Components/AboutUs/Team/SeeFullTeam";
+import ServicesCard from "../Pages/Services/ServicesCard";
+import ServicesDetails from "../Pages/Services/ServicesDetails/ServicesDetails";
+import BlogCard from "../Components/Blogs/BlogCard/BlogCard";
+import BlogDetails from "../Pages/Blogs/BlogDetails";
 
 
 const PublicRoutes = [
   { path: "", Component: Home },
   { path: "home", Component: Home },
   { path: "services", Component: Services },
+  { path: "services/:id", Component: ServicesDetails },
+
   { path: "projects", Component: Projects },
   { path: "aboutUs", Component: AboutUs },
   { path: "blogs", Component: Blogs },
+  { path: "blogDetails/:id", Component: BlogDetails },
+
   { path: "careers", Component: Careers },
   { path: "hire", Component: HireUs },
   { path: "send-cv/:id", Component: SendCv },
+  { path: "send-cv", Component: SendCv },
+
   { path: "jobDetails/:id", Component: JobDetails },
   { path: "fullTeam", Component: SeeFullTeam },
 

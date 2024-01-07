@@ -5,7 +5,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Link } from "react-router-dom";
 import logo from "../../Assets/Navbar/logo.png";
-
+import payment from "../../Assets/footer/image 7.svg"
 const Footer = () => {
   const data = [
     {
@@ -75,6 +75,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
+          <img className="w-full n_md:w-auto flex justify-center" src={payment}></img>
         </div>
       </div>
     </>

@@ -501,7 +501,7 @@ const AdminDashboardNav = () => {
               <Icon icon="mdi:cart" />
             </span>
 
-            <span className="">Orders</span>
+            <span className="">Review</span>
           </div>
           <span
             className={`text-xl transition_move ${
@@ -514,7 +514,7 @@ const AdminDashboardNav = () => {
         <ul className={`drop_down  ${openOrder === true ? "block" : "hidden"}`}>
           <li onClick={handleToggle}>
             <NavLink
-              to={"orders"}
+              to={"AddReview"}
               className="flex items-center p-2 text-[14px] hover:bg-primary duration-300  font-normal py-2.5  rounded-md  text-white"
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
@@ -523,7 +523,21 @@ const AdminDashboardNav = () => {
                 icon="fluent:branch-request-20-filled"
               />
 
-              <span className="ml-3">All Orders</span>
+              <span className="ml-3">Add Review</span>
+            </NavLink>
+          </li>
+          <li onClick={handleToggle}>
+            <NavLink
+              to={"allReviews"}
+              className="flex items-center p-2 text-[14px] hover:bg-primary duration-300  font-normal py-2.5  rounded-md  text-white"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              <Icon
+                className=" text-xl"
+                icon="fluent:branch-request-20-filled"
+              />
+
+              <span className="ml-3">All Review</span>
             </NavLink>
           </li>
         </ul>

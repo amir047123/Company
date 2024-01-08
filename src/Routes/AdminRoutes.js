@@ -8,6 +8,8 @@ import ViewApplication from "../Pages/AdminDashbord/JobPost/ViewApplication";
 import AddProject from "../Pages/AdminDashbord/Project/AddProject";
 import AllProjects from "../Pages/AdminDashbord/Project/AllProjects";
 import AddTeamMember from "../Pages/AdminDashbord/Team/AddTeamMember";
+import AdminAllReview from "../Pages/Review/AdminAllReview";
+import AdminReview from "../Pages/Review/AdminReview";
 
 
 const AdminRoutes = [
@@ -26,7 +28,9 @@ const AdminRoutes = [
 
   { path: "all-projects", Component: AllProjects },
 
-
+  { path: "AddReview", Component: AdminReview },
+  { path: "allReviews", Component: AdminAllReview },
+  { path: "updateReview/:id", Component: AdminReview },
 ];
 
 export default AdminRoutes;

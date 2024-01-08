@@ -1,4 +1,4 @@
-import { Home } from "@mui/icons-material";
+import { Home, Login } from "@mui/icons-material";
 import Services from "../Pages/Services/Services";
 import Projects from "../Pages/Projects/Projects";
 import AboutUs from "../Pages/AboutUs/AboutUs";
@@ -13,6 +13,8 @@ import ServicesDetails from "../Pages/Services/ServicesDetails/ServicesDetails";
 import BlogCard from "../Components/Blogs/BlogCard/BlogCard";
 import BlogDetails from "../Pages/Blogs/BlogDetails";
 import ProjectsDetails from "../Pages/Projects/ProjectsDetails";
+import LoginPage from "../Pages/Login/Login";
+import RegistrationPage from "../Pages/Login/RegistrationPage";
 
 
 const PublicRoutes = [
@@ -34,6 +36,8 @@ const PublicRoutes = [
   { path: "jobDetails/:id", Component: JobDetails },
   { path: "fullTeam", Component: SeeFullTeam },
   { path: "projectDetails/:id", Component: ProjectsDetails },
+  { path: "login", Component: LoginPage },
+  { path: "registration", Component: RegistrationPage },
 
 
 

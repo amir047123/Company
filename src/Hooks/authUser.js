@@ -7,24 +7,24 @@ export default function AuthUser() {
   const navigate = useNavigate();
 
   const getToken = () => {
-    const tokenString = localStorage.getItem("medmyneAccess");
+    const tokenString = localStorage.getItem("thinkystormAccess");
     const userToken = JSON.parse(tokenString);
     return userToken;
   };
 
   const getUser = () => {
-    const userString = localStorage.getItem("medmynePhone");
+    const userString = localStorage.getItem("thinkystormPhone");
     const user_detail = JSON.parse(userString);
     return user_detail;
   };
 
   const getUserRole = () => {
-    const roleString = localStorage.getItem("medmyneRole");
+    const roleString = localStorage.getItem("thinkystormRole");
     const role_name = JSON.parse(roleString);
     return role_name;
   };
   const getUserInfo = () => {
-    const userInfoString = localStorage.getItem("medmyne_user_info");
+    const userInfoString = localStorage.getItem("thinkystorm_user_info");
     const user_info = JSON.parse(userInfoString);
     return user_info;
   };
@@ -36,11 +36,11 @@ export default function AuthUser() {
   const [userInfo, setUserInfo] = useState(getUserInfo());
 
   const saveToken = (email, access, role, userInfo, userIp) => {
-    localStorage.setItem("medmyneAccess", JSON.stringify(access));
-    localStorage.setItem("medmyneEmail", JSON.stringify(email));
-    localStorage.setItem("medmyneRole", JSON.stringify(role));
-    localStorage.setItem("medmyne_user_info", JSON.stringify(userInfo));
-    localStorage.setItem("medmyne_user_ip", JSON.stringify(userIp));
+    localStorage.setItem("thinkystormAccess", JSON.stringify(access));
+    localStorage.setItem("thinkystormEmail", JSON.stringify(email));
+    localStorage.setItem("thinkystormRole", JSON.stringify(role));
+    localStorage.setItem("thinkystorm_user_info", JSON.stringify(userInfo));
+    localStorage.setItem("thinkystorm_user_ip", JSON.stringify(userIp));
 
     setEmail(email);
     setToken(token);

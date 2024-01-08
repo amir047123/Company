@@ -338,7 +338,7 @@ const AdminDashboardNav = () => {
               <Icon className=" text-xl" icon="carbon:product" />
             </span>
 
-            <span className="">Products</span>
+            <span className="">Projects</span>
           </div>
           <span
             className={`text-xl transition_move ${
@@ -353,26 +353,26 @@ const AdminDashboardNav = () => {
         >
           <li onClick={handleToggle}>
             <NavLink
-              to="addProduct"
+              to="add-project"
               className="flex items-center p-2 text-[14px]  hover:bg-primary duration-300 font-normal  py-2.5 rounded-md  text-white"
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               <span className="text-[15px]">
                 <Icon className=" text-xl" icon="material-symbols:add" />
               </span>
-              <span className="ml-3">Add Product</span>
+              <span className="ml-3">Add Project</span>
             </NavLink>
           </li>
           <li onClick={handleToggle}>
             <NavLink
-              to="allProduct"
+              to="all-projects"
               className="flex items-center p-2 text-[14px] hover:bg-primary duration-300  font-normal py-2.5  rounded-md  text-white"
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               <span className="text-[15px]">
                 <Icon className=" text-xl" icon="material-symbols:done-all" />
               </span>
-              <span className="ml-3">All Product</span>
+              <span className="ml-3">All Project</span>
             </NavLink>
           </li>
         </ul>
@@ -389,7 +389,7 @@ const AdminDashboardNav = () => {
             <span className="text-[15px]">
               <Icon className=" text-xl" icon="mdi:coupon-outline" />
             </span>
-            <span className="">Coupon</span>
+            <span className="">Team</span>
           </div>
           <span
             className={`text-xl transition_move ${
@@ -404,14 +404,14 @@ const AdminDashboardNav = () => {
         >
           <li onClick={handleToggle}>
             <NavLink
-              to="addCoupon"
+              to="add-member"
               className="flex items-center p-2 text-[14px] hover:bg-primary duration-300 font-normal  py-2.5 rounded-md  text-white"
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               <span className="text-[15px]">
                 <Icon className=" text-xl" icon="material-symbols:add" />
               </span>
-              <span className="ml-3">Add Coupon</span>
+              <span className="ml-3">Add Team</span>
             </NavLink>
           </li>
           <li onClick={handleToggle}>

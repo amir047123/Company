@@ -12,6 +12,7 @@ import ServicesCard from "../Pages/Services/ServicesCard";
 import ServicesDetails from "../Pages/Services/ServicesDetails/ServicesDetails";
 import BlogCard from "../Components/Blogs/BlogCard/BlogCard";
 import BlogDetails from "../Pages/Blogs/BlogDetails";
+import ProjectsDetails from "../Pages/Projects/ProjectsDetails";
 
 
 const PublicRoutes = [
@@ -32,6 +33,7 @@ const PublicRoutes = [
 
   { path: "jobDetails/:id", Component: JobDetails },
   { path: "fullTeam", Component: SeeFullTeam },
+  { path: "projectDetails/:id", Component: ProjectsDetails },
 
 
 

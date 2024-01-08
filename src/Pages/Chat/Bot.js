@@ -11,7 +11,7 @@ const Bot = () => {
   return (
     <div>
       <div
-        className="fixed bottom-5 sm:right-8 right-4 z-50 cursor-pointer text-white text-4xl bg-primary w-16 h-16 flex items-center justify-center rounded-full animate-bounce"
+        className="fixed bottom-5 sm:right-8 right-4 z-50 cursor-pointer text-white text-4xl  bg-secondary w-16 h-16 flex items-center justify-center rounded-full animate-bounce"
         onClick={handleWhatsAppClick}
       >
         <FaWhatsapp />

@@ -14,7 +14,7 @@ import Home from "./Pages/Home/Home";
 import PublicRoutes from "./Routes/PublicRoutes";
 import Main from "./Pages/Main/Main";
 import { ToastContainer } from "react-toastify";
-
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   // Top Progress bar edit
   TopBarProgress.config({

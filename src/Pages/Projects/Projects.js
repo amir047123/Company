@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import ProjectsPageData from "../../Data/ProjectsPageData";
+import React, { useEffect, useState } from "react";
 import Subscribe from "../../Shared/Subscribe/Subscribe";
 import ProjectsCard from "./ProjectsCard";
 
@@ -7,6 +6,20 @@ const Projects = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+
+
+  const [data,setData]=useState([]) 
+  useEffect(() => {
+      fetch(`http://localhost:5000/api/v1/project/getProjects`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data?.data.length) {
+            setData(data?.data);
+          }
+        });
+    }, []);
+
   return (
     <div className="relative">
       <img
@@ -34,7 +47,7 @@ const Projects = () => {
           </p>
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-x-10 gap-y-20 mt-28">
-          {ProjectsPageData?.map((projects) => (
+          {data?.map((projects) => (
             <ProjectsCard key={projects?._id} projects={projects} />
           ))}
         </div>

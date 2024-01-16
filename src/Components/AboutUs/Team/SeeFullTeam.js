@@ -6,10 +6,24 @@ const SeeFullTeam = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [team, setTeam] = useState([]);
+  const [teams, setTeams] = useState([]);
+  const [loading, setLoading] = useState(false);
+  //   load data
   useEffect(() => {
-    setTeam(FullTeamData);
+    setLoading(true);
+    fetch(`http://localhost:5000/api/v1/teams`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.data.length) {
+          setTeams(data?.data);
+        }
+      });
+    setLoading(false);
   }, []);
+
+
+
+
   return (
     <div className="relative">
       <img
@@ -30,15 +44,16 @@ const SeeFullTeam = () => {
         </div>
         {/* team member */}
         <div className="grid lg:grid-cols-4 align-middle md:grid-cols-3 grid-cols-1 gap-x-10 md:gap-y-32 gap-y-48 md:mt-32 mt-40">
-          {team.length > 0 &&
-            team.map((member) => {
-              const { _id, name, position, image } = member;
+          {teams.length > 0 &&
+            teams.map((member) => {
+              const { _id, Name, position, imageUrl,description } = member;
               return (
                 <TeamMember
                   key={_id}
-                  name={name}
+                  name={Name}
                   position={position}
-                  image={image}
+                  image={imageUrl}
+                  description={description}
                 />
               );
             })}

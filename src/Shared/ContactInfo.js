@@ -28,8 +28,7 @@ const ContactInfo = () => {
           <div>
             <h1 className="text-lg ">Office</h1>
             <p className="text-lightGreen text-[15px]">
-              Office Address : Dhaka-1216, Pallabi, House-15, Block-B,
-              Section-12
+            Virtual Team
             </p>
           </div>
         </div>

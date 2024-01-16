@@ -14,7 +14,7 @@ const AllJobTable = () => {
   const fetchJobs = async () => {
     try {
       const result = await axios.get(
-        "http://localhost:5000api/v1/jobPosts/getJobPosts"
+        "http://localhost:5000/api/v1/jobPosts/getJobPosts"
       );
       setJobs(Array.isArray(result.data.data) ? result.data.data : []);
     } catch (error) {
@@ -36,7 +36,7 @@ const AllJobTable = () => {
   };
 
   return (
-    <div>
+    <div className=" text-black">
       <div class=" ">
         <h1 class="text-4xl font-bold text-gray-900 leading-tight mb-2 border-b-2 border-gray-500 pb-2">
           All Job

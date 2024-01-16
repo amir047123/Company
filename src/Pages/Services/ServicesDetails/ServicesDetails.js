@@ -42,7 +42,7 @@ const ServicesDetails = () => {
         <BusinessPartner />
         <ServicesDescription serviceData={serviceData} />
         <ServicesDetailsCard serviceData={serviceData} />
-        <OurProjectImage />
+        {/* <OurProjectImage /> */}
         <ServicesReview />
         <WhyUs />
       </div>

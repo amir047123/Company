@@ -14,7 +14,7 @@ const HireUsForm = () => {
     name: "",
     email: "",
     phone: "",
-    text: "",
+    description: "",
   });
 
   const [selectedServices, setSelectedServices] = useState([]);
@@ -26,11 +26,24 @@ const HireUsForm = () => {
     setSelectedServices(filterResult);
   };
 
-  const handleHireUs = (e) => {
+  const resetForm = () => {
+    setHireUs({
+      name: "",
+      email: "",
+      phone: "",
+      description: "",
+    });
+    setSelectedServices([]);
+    document
+      .querySelectorAll("input[type=checkbox]")
+      .forEach((el) => (el.checked = false));
+  };
+
+  const handleHireUs = async (e) => {
     e.preventDefault();
 
     const emailRegEx = /^\S+@\S+\.\S+$/;
-    const phoneRegEx = /(^(\+8801|8801|01|008801))[1|3-9]{1}(\d){8}$/;
+    const phoneRegEx = /^\+(?:[0-9] ?){6,14}[0-9]$/;
 
     if (!emailRegEx.test(hireUs.email)) {
       toast.error("Email address is not valid");
@@ -45,13 +58,32 @@ const HireUsForm = () => {
       return;
     }
 
-    toast.success("Your request has been submitted.");
+    try {
+      const response = await fetch("http://localhost:5000/api/v1/contact/addContacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: hireUs.name,
+          email: hireUs.email,
+          phone: hireUs.phone,
+          description: hireUs.description,
+          services: selectedServices.join(", "),
+          type: "hire", 
+        }),
+      });
 
-    setHireUs({ name: "", email: "", phone: "", text: "" });
-    setSelectedServices([]);
-    document
-      .querySelectorAll("input[type=checkbox]")
-      .forEach((el) => (el.checked = false));
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
+      toast.success("Your request has been submitted.");
+
+      resetForm();
+    } catch (error) {
+      toast.error("Failed to submit your request. Please try again later.");
+    }
   };
 
   return (
@@ -101,8 +133,8 @@ const HireUsForm = () => {
             autoComplete="off"
             type="tel"
             required
-            onChange={(e) => setHireUs({ ...hireUs, text: e.target.value })}
-            value={hireUs.text}
+            onChange={(e) => setHireUs({ ...hireUs, description: e.target.value })}
+            value={hireUs.description}
           />
           <div className="mt-10">
             <h1 className="text-3xl mb-5">Services</h1>

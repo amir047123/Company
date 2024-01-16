@@ -49,7 +49,7 @@ const Team = () => {
           to={"/fullTeam"}
           className="my-20 flex gap-3 items-center bg-gradient-to-r from-primary/80 to-secondary/80 rounded-md h-12 w-fit px-5 hover:bg-none hover:border-2 border-primary font-medium mx-auto cursor-pointer"
         >
-          <span>Get a quick quote</span>
+          <span>Get a quick See Full Team</span>
           <span>
             <ArrowRightAltIcon />
           </span>

@@ -1,12 +1,32 @@
-import React from "react";
-import { useState } from "react";
-import Design from "./Design";
-import Dev from "./Dev";
-import UiUxDesign from "./UiUxDesign";
+import React, { useEffect, useState } from "react";
 import "./Projects.css";
+import { Link } from "react-router-dom";
+import Divider from "../../../Shared/Divider";
 
 const HomeProjects = () => {
-  const [onActiveMenu, setOnActiveMenu] = useState("design");
+  const [data, setData] = useState([]);
+  const [onActiveMenu, setOnActiveMenu] = useState(""); // Initialize with an empty string
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/v1/project/getProjects")
+      .then((res) => res.json())
+      .then((apiData) => {
+        if (apiData?.data.length) {
+          setData(apiData.data);
+
+          // Set onActiveMenu to the first category in the data
+          if (apiData.data[0]) {
+            setOnActiveMenu(apiData.data[0].category);
+          }
+        }
+      });
+  }, []);
+
+  const categories = [...new Set(data.map((project) => project.category))];
+  const displayedCategories = categories.slice(0, 3); // Only show the first three categories
+
+  const filteredProjects = data.filter((project) => project.category === onActiveMenu);
+
   return (
     <div className="mt-40">
       <div className="">
@@ -31,47 +51,49 @@ const HomeProjects = () => {
         <div className="my-20">
           <div className="sm:overflow-x-scroll md:overflow-x-scroll lg:overflow-x-hidden">
             <div className="flex flex-wrap gap-3">
-              <div>
-                <button
-                  onClick={() => setOnActiveMenu("design")}
-                  className={
-                    onActiveMenu === "design"
-                      ? "border border-primary bg-gradient-to-tr from-primary/80 to-secondary/80 px-10 py-2 text-white rounded-md"
-                      : "border border-primary px-10 py-2 text-white rounded-md"
-                  }
-                >
-                  Design
-                </button>
-              </div>
-              <div>
-                <button
-                  onClick={() => setOnActiveMenu("ui-ux")}
-                  className={
-                    onActiveMenu === "ui-ux"
-                      ? "border border-primary bg-gradient-to-tr from-primary/80 to-secondary/80 px-10 py-2 text-white rounded-md"
-                      : "border border-primary px-10 py-2 text-white rounded-md"
-                  }
-                >
-                  UI-UX
-                </button>
-              </div>
-              <div>
-                <button
-                  onClick={() => setOnActiveMenu("dev")}
-                  className={
-                    onActiveMenu === "dev"
-                      ? "border border-primary bg-gradient-to-tr from-primary/80 to-secondary/80 px-10 py-2 text-white rounded-md"
-                      : "border border-primary px-10 py-2 text-white rounded-md"
-                  }
-                >
-                  DEV
-                </button>
-              </div>
+              {displayedCategories.map((category) => (
+                <div key={category}>
+                  <button
+                    onClick={() => setOnActiveMenu(category)}
+                    className={
+                      onActiveMenu === category
+                        ? "border border-primary bg-gradient-to-tr from-primary/80 to-secondary/80 px-10 py-2 text-white rounded-md"
+                        : "border border-primary px-10 py-2 text-white rounded-md"
+                    }
+                  >
+                    {category.toUpperCase()}
+                  </button>
+                </div>
+              ))}
             </div>
-            <div className="my-10">
-              {onActiveMenu === "design" && <Design />}
-              {onActiveMenu === "dev" && <Dev />}
-              {onActiveMenu === "ui-ux" && <UiUxDesign />}
+            <div className="my-10 flex flex-wrap  gap-5">
+              {filteredProjects.map((project) => (
+                 <div
+                 key={project._id}
+                 className="card_border_gradient rounded-xl md:w-[22rem] w-80 p-5"
+               >
+                 <img
+                   className="h-auto w-auto mb-4 rounded-xl"
+                   src={`${project?.img}`}
+                   alt="card_image"
+                 />
+                 <Divider />
+                 <div className=" mt-4">
+                   <div className="">
+                     <h4 className="text-xs text-lightGreen">{project?.title}</h4>
+                   </div>
+                   <div className=" lg:flex  justify-between items-center mt-2">
+                   <h2 className="text-3xl text-primary  pb-2">{project?.authorName}</h2>
+                   <Link className=" mt-1 " to={`/projectDetails/${project?._id}`}>
+                     <button className="border border-primary  bg-gradient-to-tr from-primary/80 to-secondary/80 duration-500 ease-in px-2 text-sm h-10 text-white rounded-md">
+                       More Details
+                     </button>
+                   </Link>
+                   </div>
+                  
+                 </div>
+               </div>
+              ))}
             </div>
           </div>
         </div>

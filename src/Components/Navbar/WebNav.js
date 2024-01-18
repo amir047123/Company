@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../Assets/Navbar/logo.png";
+import AuthUser from "../../Hooks/authUser";
 
 const WebNav = () => {
   const [show, setShow] = useState();
+  const {userInfo}=AuthUser();
+  console.log(userInfo?.role);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY < 60) {
@@ -117,13 +120,21 @@ const WebNav = () => {
               </NavLink>
             </li>
           </div>
-          <Link to="hire">
+          {
+            userInfo?.role?<Link to={`/${userInfo?.role}Dashboard`}>
+            <li>
+              <button className="font-semibold bg-gradient-to-tr from-primary/80 to-secondary/80 px-4 py-2 rounded-md drop-shadow-xl text-[16px]">
+                Dashboard
+              </button>
+            </li>
+          </Link>:<Link to="hire">
             <li>
               <button className="font-semibold bg-gradient-to-tr from-primary/80 to-secondary/80 px-4 py-2 rounded-md drop-shadow-xl text-[16px]">
                 Hire us!
               </button>
             </li>
           </Link>
+          }
         </ul>
       </nav>
     </div>

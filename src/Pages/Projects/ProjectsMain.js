@@ -1,11 +1,10 @@
 import React from "react";
-import man from "../../Assets/naimur.png";
 import TagBtn from "../Blogs/TagBtn";
 import logo from "../../Assets/Team/thinkystorm-amirfaysal-ceo.png"
 
 const ProjectsMain = ({ projectData }) => {
   const { description, technologies, tags } = projectData;
-  console.log(technologies);
+
   return (
     <div className="lg:flex full gap-10 justify-between my-10 md:my-20">
       <div>

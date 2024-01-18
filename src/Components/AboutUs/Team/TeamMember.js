@@ -6,7 +6,7 @@ const TeamMember = ({ name, position, image,description }) => {
     <div className="group ">
       <div className="w-full relative">
         <img
-          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover sm:opacity-100 lg:w-[160px] md:w-[140px] sm:w-[220px] w-[180px] mx-auto lg:-mt-[77px] md:-mt-[56px] sm:-mt-[137px] -mt-[97px]"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover sm:opacity-100 lg:w-[160px] md:w-[140px] sm:w-[220px] w-[180px] mx-auto lg:-mt-[75px] md:-mt-[54px] sm:-mt-[135px] -mt-[97px] "
           src={image}
           alt="round bg img"
         />
@@ -18,7 +18,7 @@ const TeamMember = ({ name, position, image,description }) => {
       <div className="img-bottom bg-gradient-to-r from-primary/5 to-secondary/5 group-hover:bg-gradient-to-r group-hover:from-[#0f3837] group-hover:to-[#1f5260] ">
         <div className="max-w-[150px] mx-auto py-3">
           <h4 className="text-center text-white">{name}</h4>
-          <p className="text-xs text-primary text-center">{description}</p>
+          <p className="text-xs text-primary text-center">{position}</p>
         </div>
       </div>
     </div>

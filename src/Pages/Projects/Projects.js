@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Subscribe from "../../Shared/Subscribe/Subscribe";
-import ProjectsCard from "./ProjectsCard";
+import ProjectCard from "../../Components/Home/Projects/ProjectCard";
 
 const Projects = () => {
   useEffect(() => {
@@ -23,12 +23,12 @@ const Projects = () => {
   return (
     <div className="relative">
       <img
-        className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-[40%] opacity-25 sm:opacity-100 ml-auto mb-auto -mt-10"
+        className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-[40%] opacity-25 sm:opacity-100 ml-auto mb-auto -mt-10 z-[-1]"
         src="img/AboutUs/OurVision/round.png"
         alt="round bg img"
       />
       <img
-        className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-[50%] opacity-25 sm:opacity-100 mr-auto mb-auto"
+        className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-[50%] opacity-25 sm:opacity-100 mr-auto mb-auto z-[-1]"
         src="img/AboutUs/OurVision/pattern.png"
         alt="round bg img"
       />
@@ -47,8 +47,8 @@ const Projects = () => {
           </p>
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-x-10 gap-y-20 mt-28">
-          {data?.map((projects) => (
-            <ProjectsCard key={projects?._id} projects={projects} />
+          {data?.map((project) => (
+            <ProjectCard key={project?._id} project={project} />
           ))}
         </div>
       </div>

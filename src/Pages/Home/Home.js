@@ -7,7 +7,6 @@ import HomeProjects from "../../Components/Home/Projects/HomeProjects";
 import HomeServices from "../../Components/Home/Services/HomeServices";
 import HomeStep from "../../Components/Home/Step/HomeStep";
 import Subscribe from "../../Shared/Subscribe/Subscribe";
-import Technology from "../../Components/Technology/Technology";
 
 const Home = () => {
   useEffect(() => {

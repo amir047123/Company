@@ -2,8 +2,9 @@ import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
+import AuthUser from "../../Hooks/authUser";
 const AdminDashboardNav = () => {
-  const [signOut, loading, error] = useState();
+  const {userInfo,logout}=AuthUser();
   const [issideNavOpen, setSidenavOpen] = useState(false);
 
   //show  notice
@@ -213,55 +214,6 @@ const AdminDashboardNav = () => {
         </ul>
       </li>
 
-      {/* <li>
-        <span
-          onClick={() => setOpenOffline(!openOffline)}
-          className="flex items-center justify-between cursor-pointer gap-5 px-2 py-2.5 text-[14px] font-normal rounded  text-white hover:bg-primary duration-300"
-        >
-          <div className="flex items-center gap-2">
-            <span className="text-[15px]">
-              <Icon icon="material-symbols:category" />
-            </span>
-
-            <span className="">Offline Selling</span>
-          </div>
-          <span
-            className={`text-xl transition_move ${
-              openOffline === true ? "rotate-180" : ""
-            }`}
-          >
-            <Icon icon="mingcute:down-fill" />
-          </span>
-        </span>
-        <ul
-          className={`drop_down  ${openOffline === true ? "block" : "hidden"}`}
-        >
-          <li onClick={handleToggle}>
-            <NavLink
-              to="create-offline-order"
-              className="flex items-center p-2 text-[14px] hover:bg-primary duration-300 font-normal  py-2.5 rounded-md  text-white"
-              style={({ isActive }) => (isActive ? activeStyle : undefined)}
-            >
-              <span className="text-[15px]">
-                <Icon className=" text-xl" icon="material-symbols:add" />
-              </span>
-              <span className="ml-3">Create Offline Order</span>
-            </NavLink>
-          </li>
-          <li onClick={handleToggle}>
-            <NavLink
-              to="offline-order-history"
-              className="flex items-center p-2 text-[14px] hover:bg-primary duration-300  font-normal py-2.5  rounded-md  text-white"
-              style={({ isActive }) => (isActive ? activeStyle : undefined)}
-            >
-              <span className="text-[15px]">
-                <Icon className=" text-xl" icon="material-symbols:done-all" />
-              </span>
-              <span className="ml-3">Offline Order History</span>
-            </NavLink>
-          </li>
-        </ul>
-      </li> */}
 
       <li>
         <NavLink
@@ -652,13 +604,21 @@ const AdminDashboardNav = () => {
           <span className="">Request Medicine</span>
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to={"changePassword"}
+          className="flex items-center gap-2 px-2 py-2.5 text-[14px] font-normal rounded  text-white hover:bg-primary duration-300"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          <span className="text-lg">
+            <Icon icon="ic:outline-change-circle" />
+          </span>
+
+          <span className="">Change Password</span>
+        </NavLink>
+      </li>
       <li
-         onClick={async () => {
-          const success = await signOut();
-          if (success) {
-            toast.success('You are sign out');
-          }
-        }}
+         onClick={()=>logout()}
         className="flex cursor-pointer items-center gap-2 px-2 py-2.5 text-[14px] font-normal rounded  text-white hover:bg-primary duration-300"
       >
         <span className="text-lg">

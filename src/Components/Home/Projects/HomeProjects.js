@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Projects.css";
 import { Link } from "react-router-dom";
 import Divider from "../../../Shared/Divider";
+import ProjectCard from "./ProjectCard";
 
 const HomeProjects = () => {
   const [data, setData] = useState([]);
@@ -25,7 +26,9 @@ const HomeProjects = () => {
   const categories = [...new Set(data.map((project) => project.category))];
   const displayedCategories = categories.slice(0, 3); // Only show the first three categories
 
-  const filteredProjects = data.filter((project) => project.category === onActiveMenu);
+  const filteredProjects = data.filter(
+    (project) => project.category === onActiveMenu
+  );
 
   return (
     <div className="mt-40">
@@ -36,7 +39,7 @@ const HomeProjects = () => {
           alt=""
         />
       </div>
-      <div className="w-10/12 mx-auto relative">
+      <div className="md:w-10/12 w-11/12 mx-auto relative">
         <div className="flex justify-center">
           <div className="">
             <h1 className="uppercase font-medium text-xl text-center text-primary leading-loose">
@@ -66,33 +69,9 @@ const HomeProjects = () => {
                 </div>
               ))}
             </div>
-            <div className="my-10 flex flex-wrap  gap-5">
+            <div className="my-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
               {filteredProjects.map((project) => (
-                 <div
-                 key={project._id}
-                 className="card_border_gradient rounded-xl md:w-[22rem] w-80 p-5"
-               >
-                 <img
-                   className="h-auto w-auto mb-4 rounded-xl"
-                   src={`${project?.img}`}
-                   alt="card_image"
-                 />
-                 <Divider />
-                 <div className=" mt-4">
-                   <div className="">
-                     <h4 className="text-xs text-lightGreen">{project?.title}</h4>
-                   </div>
-                   <div className=" lg:flex  justify-between items-center mt-2">
-                   <h2 className="text-3xl text-primary  pb-2">{project?.authorName}</h2>
-                   <Link className=" mt-1 " to={`/projectDetails/${project?._id}`}>
-                     <button className="border border-primary  bg-gradient-to-tr from-primary/80 to-secondary/80 duration-500 ease-in px-2 text-sm h-10 text-white rounded-md">
-                       More Details
-                     </button>
-                   </Link>
-                   </div>
-                  
-                 </div>
-               </div>
+              <ProjectCard key={project._id} project={project}/>
               ))}
             </div>
           </div>

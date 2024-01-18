@@ -6,11 +6,11 @@ import Typewriter from "typewriter-effect";
 const HeroContent = () => {
   return (
     <div>
-      <h1 className="md:text-5xl text-2xl font-semibold w-[48vw] leading-tight whitespace-pre">
-        Let's Build <br />
-        <span>Something amazing</span> <br />
+      <h1 className="md:text-5xl text-2xl font-semibold w-full leading-tight whitespace-pre uppercase">
+        Let's Build Something<br />
+        <span>Amazing with</span> <br />
         <span className="text-primary flex">
-          <span className="text-white">with </span>
+          
           <Typewriter
             options={{
               strings: ["Thinky Storm"],

@@ -18,7 +18,7 @@ const TeamMember = ({ name, position, image,description }) => {
       <div className="img-bottom bg-gradient-to-r from-primary/5 to-secondary/5 group-hover:bg-gradient-to-r group-hover:from-[#0f3837] group-hover:to-[#1f5260] ">
         <div className="max-w-[150px] mx-auto py-3">
           <h4 className="text-center text-white">{name}</h4>
-          <p className="text-xs text-primary text-center">{description}</p>
+          <p className="text-xs text-primary text-center">{position}</p>
         </div>
       </div>
     </div>

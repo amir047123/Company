@@ -12,14 +12,12 @@ const AdminDashboard = () => {
   //hide sidenav by default
   const [issideNavOpen, setSidenavOpen] = useState(false);
 
-
   //show sidenav on toggle
   const handleToggle = () => {
     issideNavOpen === true ? setSidenavOpen(false) : setSidenavOpen(true);
   };
 
   const [loading,setLoading]=useState(false);
-const [u,setU]=useState([]);
   const navigate = useNavigate();
 
 

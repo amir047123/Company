@@ -1,11 +1,5 @@
 import React from "react";
 
-import img from "../../../Assets/OurVision/img1.jpg";
-import img1 from "../../../Assets/OurVision/img2.jpg";
-import img2 from "../../../Assets/OurVision/img3.jpg";
-import img3 from "../../../Assets/OurVision/img4.jpg";
-import img4 from "../../../Assets/OurVision/img5.jpg";
-
 const OurVision = () => {
   return (
     <div className="relative">

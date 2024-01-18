@@ -18,9 +18,9 @@ const HomeExperienceContent = () => {
           delivering high-quality work, they are well-positioned to help their
           clients succeed in the competitive world of technology.
         </p>
-        <Link to={"/hire"}>
+        <Link to={"life-cycle"}>
           <button className="mt-10 flex gap-3 items-center bg-gradient-to-r from-primary/80 to-secondary/80 rounded-md px-5 py-3 font-medium">
-            <span>Get a quick quote</span>
+            <span>See Development Life Cycle</span>
             <span>
               <ArrowRightAltIcon />
             </span>

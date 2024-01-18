@@ -73,6 +73,18 @@ const WebNav = () => {
                     ? "bg-primary transparent px-3 py-2 text-primary"
                     : "px-3 py-2 hover:text-primary"
                 }
+                to={"build-technology"}
+              >
+                Technology
+              </NavLink>
+            </li>
+            <li className="font-medium text-[16px]">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-primary transparent px-3 py-2 text-primary"
+                    : "px-3 py-2 hover:text-primary"
+                }
                 to={"aboutUs"}
               >
                 About us

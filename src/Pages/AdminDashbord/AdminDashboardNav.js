@@ -604,6 +604,19 @@ const AdminDashboardNav = () => {
           <span className="">Request Medicine</span>
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to={"changePassword"}
+          className="flex items-center gap-2 px-2 py-2.5 text-[14px] font-normal rounded  text-white hover:bg-primary duration-300"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          <span className="text-lg">
+            <Icon icon="ic:outline-change-circle" />
+          </span>
+
+          <span className="">Change Password</span>
+        </NavLink>
+      </li>
       <li
          onClick={()=>logout()}
         className="flex cursor-pointer items-center gap-2 px-2 py-2.5 text-[14px] font-normal rounded  text-white hover:bg-primary duration-300"

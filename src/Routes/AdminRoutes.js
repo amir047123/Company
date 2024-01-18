@@ -10,6 +10,7 @@ import AllProjects from "../Pages/AdminDashbord/Project/AllProjects";
 import AddTeamMember from "../Pages/AdminDashbord/Team/AddTeamMember";
 import AdminAllReview from "../Pages/Review/AdminAllReview";
 import AdminReview from "../Pages/Review/AdminReview";
+import ChangePassword from "../Shared/ChangePassword";
 
 
 const AdminRoutes = [
@@ -18,6 +19,7 @@ const AdminRoutes = [
   { path: "all-job-table", Component: AllJobTable },
   { path: "job-edit/:id", Component: JobEdit },
 
+  { path: "changePassword", Component: ChangePassword },
   { path: "allApplication", Component: AllApplications },
   { path: "viewApplication/:id", Component: ViewApplication },
 

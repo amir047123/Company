@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Lottie from "lottie-react";
 import updateAnimation from "../Assets/change.json";
 import { toast } from "react-toastify";
-import AuthUser from "../../Hooks/authUser";
-import { server_url } from "../../Config/API";
-import UpdateHooks from "../../Hooks/UpdateHooks";
+import AuthUser from "../Hooks/authUser";
+import { server_url } from "../Config/API";
+import UpdateHooks from "../Hooks/UpdateHooks";
+
 
 const ChangePassword = () => {
   const { userInfo } = AuthUser();
@@ -51,10 +52,10 @@ const ChangePassword = () => {
       </div>
       <form className="col-span-7 lg:px-10" onSubmit={handleChangePassword}>
         <div className="w-fit mb-5">
-          <h2 className="text-secondary font-semibold mb-1 text-lg">
+          <h2 className="text-primary font-semibold mb-1 text-lg">
             Change Password
           </h2>
-          <div className="h-1 bg-secondary w-[65%] rounded-full"></div>
+          <div className="h-1 bg-primary w-[65%] rounded-full"></div>
         </div>
         {/* Extract each input field to its own component for better readability if required */}
         <PasswordField
@@ -76,7 +77,7 @@ const ChangePassword = () => {
         />
 
         <button
-          className="bg-secondary rounded-md hover:scale-105 text-white px-3 py-1.5 cursor-pointer duration-300 mt-5"
+          className="bg-primary rounded-md hover:scale-105 text-white px-3 py-1.5 cursor-pointer duration-300 mt-5"
           type="submit"
         >
           CHANGE!

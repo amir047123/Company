@@ -30,18 +30,18 @@ const BuildTechnology = () => {
           </div>
 
           <div class="grid grid-cols-1 gap-6 mt-12 lg:mt-16 xl:gap-10 sm:grid-cols-1 lg:grid-cols-3">
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center ">
                   <img class="flex-shrink-0 w-12 h-auto" src={js} alt="" />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">JavaScript</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">JavaScript</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
 
                   <a href="https://www.javascript.com" target="_blank">
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -56,7 +56,7 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7">
+                <p class="text-base leading-relaxed text-white mt-7">
                   JavaScript empowers dynamic, interactive, and responsive web
                   applications, enhancing user experience and enabling seamless
                   client-server communication for modern, feature-rich websites
@@ -64,18 +64,18 @@ const BuildTechnology = () => {
               </div>
             </div>
 
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center ">
                   <img class="flex-shrink-0 w-12 h-auto" src={ts} alt="" />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">Typescript</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">Typescript</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
                   <a href="https://www.typescriptlang.org/" target="_blank">
                     {" "}
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -90,7 +90,7 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7">
+                <p class="text-base leading-relaxed text-white mt-7">
                   JavaScript empowers dynamic, interactive, and responsive web
                   applications, enhancing user experience and enabling seamless
                   client-server communication for modern, feature-rich websites
@@ -98,19 +98,19 @@ const BuildTechnology = () => {
               </div>
             </div>
 
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center">
                   <img class="flex-shrink-0 w-12 h-auto" src={Html} alt="" />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">HTML</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">HTML</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
 
                   <a href="https://html.com/" target="_blank">
                     {" "}
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -125,7 +125,7 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7">
+                <p class="text-base leading-relaxed text-white mt-7">
                   HTML structures content, providing a standardized format for
                   web documents, ensuring accessibility, and facilitating
                   seamless integration of multimedia in websites.
@@ -133,20 +133,20 @@ const BuildTechnology = () => {
               </div>
             </div>
 
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center">
                   <img class="flex-shrink-0 w-12 h-auto" src={css} alt="" />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">CSS</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">CSS</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
                   <a
                     href="https://www.w3.org/Style/CSS/Overview.en.html"
                     target="_blank"
                   >
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -161,7 +161,7 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7">
+                <p class="text-base leading-relaxed text-white mt-7">
                   CSS enriches web design, ensuring consistent styling,
                   responsive layouts, and improved user experience, enhancing
                   the visual appeal and functionality of websites.
@@ -169,17 +169,17 @@ const BuildTechnology = () => {
               </div>
             </div>
 
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center">
                   <img class="flex-shrink-0 w-12 h-auto" src={react} alt="" />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">React Js</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">React Js</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
                   <a href="https://legacy.reactjs.org/" target="_blank">
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -194,7 +194,7 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7">
+                <p class="text-base leading-relaxed text-white mt-7">
                   React.js enables efficient UI development, component
                   reusability, and virtual DOM, streamlining the creation of
                   dynamic, high-performance web applications.
@@ -202,17 +202,17 @@ const BuildTechnology = () => {
               </div>
             </div>
 
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center">
                   <img class="flex-shrink-0 w-12 h-auto" src={next} alt="" />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">Next Js</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">Next Js</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
                   <a href="https://nextjs.org/" target="_blank">
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -227,7 +227,7 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7">
+                <p class="text-base leading-relaxed text-white mt-7">
                   Next.js simplifies React app deployment, enhances SEO, and
                   facilitates server-side rendering for faster page loads,
                   optimizing web development efficiency.
@@ -235,7 +235,7 @@ const BuildTechnology = () => {
               </div>
             </div>
 
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center">
                   <img
@@ -244,12 +244,12 @@ const BuildTechnology = () => {
                     alt=""
                   />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">Tailwind</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">Tailwind</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
                   <a href="https://tailwindcss.com/" target="_blank">
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -264,7 +264,7 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7">
+                <p class="text-base leading-relaxed text-white mt-7">
                   Tailwind CSS streamlines styling with utility classes,
                   offering a customizable, responsive, and efficient approach
                   for building modern and visually appealing web interfaces.
@@ -272,17 +272,17 @@ const BuildTechnology = () => {
               </div>
             </div>
 
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center">
                   <img class="flex-shrink-0 w-12 h-auto" src={node} alt="" />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">Node Js</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">Node Js</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
                   <a href="https://nodejs.org/en" target="_blank">
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -297,7 +297,7 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7">
+                <p class="text-base leading-relaxed text-white mt-7">
                   Node.js powers server-side JavaScript, enabling scalable,
                   fast, and event-driven web applications, fostering seamless
                   data exchange and efficient real-time communication.
@@ -305,17 +305,17 @@ const BuildTechnology = () => {
               </div>
             </div>
 
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center">
                   <img class="flex-shrink-0 w-12 h-auto" src={express} alt="" />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">Express Js</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">Express Js</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
                   <a href="https://expressjs.com/" target="_blank">
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -330,26 +330,26 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7">
+                <p class="text-base leading-relaxed text-white mt-7">
                   Express.js, a minimalistic Node.js framework, streamlines
                   server-side development, simplifying routing, middleware
                   usage, and fostering scalable and robust web applications.
                 </p>
               </div>
             </div>
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center">
                   <img class="flex-shrink-0 w-12 h-auto" src={GraphQL} alt="" />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">GraphQL</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">GraphQL</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
 
                   <a href="https://graphql.org/" target="_blank">
                     {" "}
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -364,24 +364,24 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7">
+                <p class="text-base leading-relaxed text-white mt-7">
                   GraphQL optimizes data fetching, offering a flexible schema,
                   reduced over-fetching, and under-fetching, improving
                   efficiency and enhancing API development for web applications.
                 </p>
               </div>
             </div>
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center">
                   <img class="flex-shrink-0 w-12 h-auto" src={MongoDb} alt="" />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">MongoDB</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">MongoDB</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
                   <a href="https://www.mongodb.com/" target="_blank">
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -396,25 +396,25 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7">
+                <p class="text-base leading-relaxed text-white mt-7">
                   MongoDB, a NoSQL database, enables scalable, flexible, and
                   schema-less data storage, enhancing web development with
                   efficient handling of diverse data structures.
                 </p>
               </div>
             </div>
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center">
                   <img class="flex-shrink-0 w-12 h-auto" src={MySLQ} alt="" />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">MySLQ</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">MySLQ</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
                   <a href="https://www.mysql.com/" target="_blank">
                     {" "}
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -429,14 +429,14 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7">
+                <p class="text-base leading-relaxed text-white mt-7">
                   MySQL provides a reliable, open-source relational database
                   solution, supporting structured data storage, retrieval, and
                   management, crucial for web development applications.
                 </p>
               </div>
             </div>
-            <div class="overflow-hidden bg-white rounded shadow">
+            <div class="overflow-hidden bg-white  shadow card_border_gradient  rounded-xl">
               <div class="p-8">
                 <div class="flex items-center">
                   <img
@@ -445,13 +445,13 @@ const BuildTechnology = () => {
                     alt=""
                   />
                   <div class="ml-5 mr-auto">
-                    <p class="text-xl font-semibold text-black">Firebase</p>
-                    <p class="mt-px text-sm text-black">Direct Integration</p>
+                    <p class="text-xl font-semibold text-white">Firebase</p>
+                    <p class="mt-px text-sm text-white">Direct Integration</p>
                   </div>
                   <a href="https://firebase.google.com/" target="_blank">
                     {" "}
                     <svg
-                      class=" w-5 h-5 text-black"
+                      class=" w-5 h-5 text-white"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -466,7 +466,7 @@ const BuildTechnology = () => {
                     </svg>
                   </a>
                 </div>
-                <p class="text-base leading-relaxed text-black mt-7 ">
+                <p class="text-base leading-relaxed text-white mt-7 ">
                   Firebase offers a comprehensive cloud-based platform,
                   facilitating real-time database, authentication, hosting, and
                   other services, simplifying and accelerating web development

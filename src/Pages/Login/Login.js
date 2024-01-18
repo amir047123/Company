@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import AuthUser from "../../Hooks/authUser";
+import { toast } from "react-toastify";
+import { Icon } from "@iconify/react";
 
 const LoginPage = () => {
   const navigate = useNavigate();
   const { http, setToken, getToken, userInfo, userIp } = AuthUser();
   const [loading, setLoading] = useState(false);
-  const location = useLocation();
-  const from = location?.state?.from?.pathname || "/";
 
   const handelSubmit = (e) => {
+    setLoading(true)
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
@@ -29,37 +30,18 @@ const LoginPage = () => {
           );
           setLoading(false);
           window.location.reload();
-          // window.location.reload();
+
         } else {
-          // console.log("rrrrrr");
+          toast.error(res?.data?.message);
+          setLoading(false)
         }
       })
       .catch((err) => {
         console.log("Error", err.response.data.message);
         setLoading(false);
-        if (
-          err.response.data.message ===
-          "No user Found. Please Create an account"
-        ) {
-          swal("Error", "No user Found. Please Create an account!", "error");
-        }
-        if (
-          err.response.data.message ===
-          "Please check your email to verify your account."
-        ) {
-          swal(
-            "Error",
-            "Please check your email to verify your account!",
-            "error"
-          );
-        }
-        if (err.response.data.message === "email or password are not correct") {
-          swal("Error", "Email or Password Wrong! ", "error");
-        }
-        if (err.response.data.message === "Device limit exceeded") {
-          swal("Error", "Device limit exceeded! ", "error");
-        }
-      });
+        toast.error(err.response.data.message)
+       }
+      );
   };
 
   return (
@@ -78,7 +60,7 @@ const LoginPage = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Your email
                 </label>
@@ -86,7 +68,7 @@ const LoginPage = () => {
                   type="email"
                   name="email"
                   id="email"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-black sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                   placeholder="Enter Your E-mail"
                   required
                 />
@@ -103,7 +85,7 @@ const LoginPage = () => {
                   name="password"
                   id="password"
                   placeholder="••••••••"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-black sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                   required
                 />
               </div>
@@ -114,7 +96,7 @@ const LoginPage = () => {
                       id="remember"
                       aria-describedby="remember"
                       type="checkbox"
-                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300"
                       required=""
                     />
                   </div>
@@ -136,9 +118,11 @@ const LoginPage = () => {
               </div>
               <button
                 type="submit"
-                className="w-full text-white bg-primary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                className="w-full text-white bg-primary hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
               >
-                Sign in
+              {
+                loading?<Icon className="mx-auto text-2xl" icon="eos-icons:bubble-loading"></Icon>:"Sign In"
+              }
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Don’t have an account yet?{" "}

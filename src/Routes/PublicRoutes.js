@@ -17,6 +17,7 @@ import LoginPage from "../Pages/Login/Login";
 import RegistrationPage from "../Pages/Login/RegistrationPage";
 import DevelopmentLifeCycle from "../Pages/Development life cycle/DevelopmentLifeCycle";
 import BuildTechnology from "../Pages/Development life cycle/BuildTechnology";
+import Faq from "../Pages/FAQ/Faq";
 
 
 const PublicRoutes = [
@@ -45,6 +46,7 @@ const PublicRoutes = [
   { path: "life-cycle", Component: DevelopmentLifeCycle },
   { path: "build-technology", Component: BuildTechnology },
 
+  { path: "Faq", Component: Faq },
 
 ];
 

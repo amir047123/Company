@@ -92,6 +92,9 @@ const Footer = () => {
               <p className="my-2">
                 <Link to={"/careers"}>Careers</Link>
               </p>
+              <p className="my-2">
+                <Link to={"Faq"}>FAQ</Link>
+              </p>
             </div>
             <div className="mt-0 md:mt-5 lg:mt-0">
               <p className="text-white text-xl font-medium">Our NewsLetter</p>

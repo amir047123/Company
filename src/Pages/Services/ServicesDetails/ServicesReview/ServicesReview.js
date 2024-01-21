@@ -3,7 +3,7 @@ import ServicesReviewSlider from "./ServicesReviewSlider";
 
 const ServicesReview = () => {
   return (
-    <div>
+    <div className=" mt-10">
       {/* review content heder */}
       <div className="max-w-md">
         <p className="text-primary uppercase text-sm">

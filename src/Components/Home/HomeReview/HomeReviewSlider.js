@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 // Import Swiper styles
@@ -6,9 +6,18 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./HomeReview.css";
 import FormatQuoteRoundedIcon from "@mui/icons-material/FormatQuoteRounded";
-import data from "../../../Data/HomeReviewSliderData";
 
 const HomeReviewSlider = () => {
+  const [data,setData]=useState([])
+  useEffect(() => { 
+      fetch(`http://localhost:5000/api/v1/review/getReview`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data?.data.length) {
+            setData(data?.data);
+          }
+        });
+    }, []);
   return (
     <div className="w-10/12 mx-auto justify-center flex">
       <Swiper
@@ -69,7 +78,7 @@ const HomeReviewSlider = () => {
                   </div>
 
                   <p className="text-white group-hover:text-dark text-xs lg:text-sm text-justify px-2 py-5">
-                    {d.details.slice(0, 250)} .....
+                    {d.review.slice(0, 250)} .....
                   </p>
                 </div>
                 <img

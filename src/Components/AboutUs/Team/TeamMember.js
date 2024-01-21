@@ -1,12 +1,12 @@
 import React from "react";
 import "./TeamMember.css";
 
-const TeamMember = ({ name, position, image }) => {
+const TeamMember = ({ name, position, image,description }) => {
   return (
     <div className="group ">
       <div className="w-full relative">
         <img
-          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover sm:opacity-100 lg:w-[160px] md:w-[140px] sm:w-[220px] w-[180px] mx-auto lg:-mt-[77px] md:-mt-[56px] sm:-mt-[137px] -mt-[97px]"
+          className="absolute inset-0 object-[75%] sm:object-[25%] object-cover sm:opacity-100 lg:w-[160px] md:w-[140px] sm:w-[220px] w-[180px] mx-auto lg:-mt-[75px] md:-mt-[54px] sm:-mt-[135px] -mt-[97px] "
           src={image}
           alt="round bg img"
         />

@@ -30,9 +30,10 @@ const Team = () => {
         </div>
         {/* team member */}
         <div className="grid lg:grid-cols-4 align-middle md:grid-cols-3 grid-cols-1 gap-x-10 md:gap-y-32 gap-y-48 md:mt-32 mt-40">
-          {team.length > 0 &&
+          {team?.length > 0 &&
             team.map((member) => {
               const { _id, name, position, image } = member;
+            
               return (
                 <TeamMember
                   key={_id}
@@ -49,7 +50,7 @@ const Team = () => {
           to={"/fullTeam"}
           className="my-20 flex gap-3 items-center bg-gradient-to-r from-primary/80 to-secondary/80 rounded-md h-12 w-fit px-5 hover:bg-none hover:border-2 border-primary font-medium mx-auto cursor-pointer"
         >
-          <span>Get a quick quote</span>
+          <span>Get a quick See Full Team</span>
           <span>
             <ArrowRightAltIcon />
           </span>

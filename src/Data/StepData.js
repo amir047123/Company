@@ -18,9 +18,9 @@ export const stepData = [
     id: 3,
   },
   {
-    icon: "./img/Step/icon/04.svg",
-    title: "Test",
-    description: "To publish a safe and rock-solid project.",
+    icon: "./img/Step/icon/06.svg",
+    title: "Design",
+    description: "To create a captivating identity.",
     id: 4,
   },
   {
@@ -30,11 +30,13 @@ export const stepData = [
     id: 5,
   },
   {
-    icon: "./img/Step/icon/06.svg",
-    title: "Design",
-    description: "To create a captivating identity.",
+    icon: "./img/Step/icon/04.svg",
+    title: "Test",
+    description: "To publish a safe and rock-solid project.",
     id: 6,
   },
+
+
   {
     icon: "./img/Step/icon/07.svg",
     title: "Support",
